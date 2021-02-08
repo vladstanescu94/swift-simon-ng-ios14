@@ -132,4 +132,22 @@ extension RestaurantTableViewController {
         
         return swipeConfiguration
     }
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+            let favoriteAction = UIContextualAction(style: .destructive, title: "") { (action, sourceView, completionHandler) in
+                
+                let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
+                cell.favoriteImage.isHidden = self.restaurants[indexPath.row].isVisited
+                self.restaurants[indexPath.row].isVisited = self.restaurants[indexPath.row].isVisited ? false : true
+                
+                completionHandler(true)
+            }
+        
+            favoriteAction.backgroundColor = UIColor.systemYellow
+            favoriteAction.image = UIImage(systemName: self.restaurants[indexPath.row].isVisited ? "heart.slash.fill" : "heart.fill")
+            
+            let swipeConfiguration = UISwipeActionsConfiguration(actions: [favoriteAction])
+                
+            return swipeConfiguration
+        }
 }
