@@ -177,75 +177,10 @@
                     <view key="view" contentMode="scaleToFill" id="GTP-fp-oAe">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G0f-W1-Ft9">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                            </imageView>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DF3-w9-MbG" customClass="RestaurantDetailsDescriptionView" customModule="FoodPin" customModuleProvider="target">
-                                <rect key="frame" x="20" y="108" width="350" height="200"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kty-mJ-Vm0">
-                                        <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
-                                        <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BGp-V2-BQO">
-                                                <rect key="frame" x="0.0" y="0.0" width="350" height="66.666666666666671"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGD-XH-VkL">
-                                                <rect key="frame" x="0.0" y="66.666666666666657" width="350" height="66.666666666666657"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Au3-KE-Kqx">
-                                                <rect key="frame" x="0.0" y="133.33333333333334" width="350" height="66.666666666666657"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="Kty-mJ-Vm0" firstAttribute="leading" secondItem="DF3-w9-MbG" secondAttribute="leading" id="Bq8-V1-FJl"/>
-                                    <constraint firstAttribute="height" constant="200" id="Pvg-GZ-29q"/>
-                                    <constraint firstAttribute="bottom" secondItem="Kty-mJ-Vm0" secondAttribute="bottom" id="aAl-0d-mBD"/>
-                                    <constraint firstAttribute="trailing" secondItem="Kty-mJ-Vm0" secondAttribute="trailing" id="llw-gP-cWk"/>
-                                    <constraint firstItem="Kty-mJ-Vm0" firstAttribute="top" secondItem="DF3-w9-MbG" secondAttribute="top" id="u1z-1m-mbw"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="restaurantLocation" destination="Au3-KE-Kqx" id="D4a-bQ-rO1"/>
-                                    <outlet property="restaurantName" destination="BGp-V2-BQO" id="cqI-ll-2uz"/>
-                                    <outlet property="restaurantType" destination="GGD-XH-VkL" id="RwN-5x-Yx6"/>
-                                </connections>
-                            </view>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Mg4-HY-LxV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="DF3-w9-MbG" firstAttribute="leading" secondItem="Mg4-HY-LxV" secondAttribute="leading" constant="20" id="0Zx-M6-v2s"/>
-                            <constraint firstItem="DF3-w9-MbG" firstAttribute="top" secondItem="Mg4-HY-LxV" secondAttribute="top" constant="20" id="3V1-Pc-kEo"/>
-                            <constraint firstItem="Mg4-HY-LxV" firstAttribute="trailing" secondItem="DF3-w9-MbG" secondAttribute="trailing" constant="20" id="55E-kd-Ilp"/>
-                            <constraint firstItem="G0f-W1-Ft9" firstAttribute="trailing" secondItem="Mg4-HY-LxV" secondAttribute="trailing" id="82z-nL-e92"/>
-                            <constraint firstAttribute="bottom" secondItem="G0f-W1-Ft9" secondAttribute="bottom" id="C2t-0Y-WrP"/>
-                            <constraint firstItem="G0f-W1-Ft9" firstAttribute="top" secondItem="GTP-fp-oAe" secondAttribute="top" id="fxT-pa-aeZ"/>
-                            <constraint firstItem="G0f-W1-Ft9" firstAttribute="leading" secondItem="Mg4-HY-LxV" secondAttribute="leading" id="pcs-Vw-Fdg"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nIk-RW-tME"/>
-                    <connections>
-                        <outlet property="restaurantDescriptionView" destination="DF3-w9-MbG" id="JHY-KX-OFH"/>
-                        <outlet property="restaurantImageView" destination="G0f-W1-Ft9" id="hFL-hw-bd6"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NkE-3W-cRu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
