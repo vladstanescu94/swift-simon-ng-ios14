@@ -17,6 +17,7 @@ class RestaurantTableViewController: UITableViewController {
         super.viewDidLoad()
         setupTableView()
         setupDataSourceSnapshot()
+        setupNavigation()
     }
     
     private func setupTableView() {
@@ -31,5 +32,9 @@ class RestaurantTableViewController: UITableViewController {
         snapshot.appendItems(restaurants, toSection: .all)
         
         dataSource.apply(snapshot, animatingDifferences: false)
+    }
+    
+    private func setupNavigation() {
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
