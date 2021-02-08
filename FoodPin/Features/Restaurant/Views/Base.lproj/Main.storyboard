@@ -3,6 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -81,6 +82,7 @@
                                     <outlet property="nameLabel" destination="iQM-4I-a9d" id="ppt-pr-Uhh"/>
                                     <outlet property="thumbnailImageView" destination="c5U-NA-odf" id="zIa-yF-Igr"/>
                                     <outlet property="typeLabel" destination="hsY-Vj-88A" id="Tic-fX-NOm"/>
+                                    <segue destination="dji-B8-oK5" kind="show" id="lKH-FH-KQm"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favoritecell" id="qCW-3g-trX" customClass="RestaurantTableViewCell" customModule="FoodPin" customModuleProvider="target">
@@ -153,6 +155,7 @@
                                     <outlet property="nameLabel" destination="Xsx-4F-qmc" id="gd0-ln-MH7"/>
                                     <outlet property="thumbnailImageView" destination="8M5-I9-96F" id="cYu-EF-C25"/>
                                     <outlet property="typeLabel" destination="UM5-Ak-WVj" id="F78-dl-Wzy"/>
+                                    <segue destination="dji-B8-oK5" kind="show" id="AhY-4Q-7d7"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -166,6 +169,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdL-tU-exQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="873.84615384615381" y="-23.459715639810426"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7Ql-gF-w1q">
+            <objects>
+                <viewController id="dji-B8-oK5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GTP-fp-oAe">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G0f-W1-Ft9">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mg4-HY-LxV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="G0f-W1-Ft9" secondAttribute="bottom" id="3Ca-Bc-wt9"/>
+                            <constraint firstItem="G0f-W1-Ft9" firstAttribute="top" secondItem="GTP-fp-oAe" secondAttribute="top" id="GVM-q1-bPV"/>
+                            <constraint firstItem="G0f-W1-Ft9" firstAttribute="trailing" secondItem="Mg4-HY-LxV" secondAttribute="trailing" id="LHv-HO-bqt"/>
+                            <constraint firstItem="G0f-W1-Ft9" firstAttribute="leading" secondItem="Mg4-HY-LxV" secondAttribute="leading" id="bGc-oW-inv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nIk-RW-tME"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NkE-3W-cRu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1692.3076923076922" y="-23.459715639810426"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yat-iE-Hux">
@@ -186,6 +216,9 @@
             <point key="canvasLocation" x="-55.38461538461538" y="-23.459715639810426"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="AhY-4Q-7d7"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
