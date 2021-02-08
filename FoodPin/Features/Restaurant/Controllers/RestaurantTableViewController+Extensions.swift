@@ -79,9 +79,7 @@ extension RestaurantTableViewController {
         let favoriteAction = UIAlertAction(title: favoriteActionTitle, style: .default, handler: {
             (action: UIAlertAction!) -> Void in
             
-            let cell = self.tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
-            cell.favoriteImage.isHidden = self.restaurants[indexPath.row].isVisited
-            self.restaurants[indexPath.row].isVisited = !self.restaurants[indexPath.row].isVisited
+            self.markCellAsFavorite(at: indexPath)
         })
         
         return favoriteAction
@@ -135,11 +133,7 @@ extension RestaurantTableViewController {
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
             let favoriteAction = UIContextualAction(style: .destructive, title: "") { (action, sourceView, completionHandler) in
-                
-                let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
-                cell.favoriteImage.isHidden = self.restaurants[indexPath.row].isVisited
-                self.restaurants[indexPath.row].isVisited = self.restaurants[indexPath.row].isVisited ? false : true
-                
+                self.markCellAsFavorite(at: indexPath)
                 completionHandler(true)
             }
         
@@ -149,5 +143,11 @@ extension RestaurantTableViewController {
             let swipeConfiguration = UISwipeActionsConfiguration(actions: [favoriteAction])
                 
             return swipeConfiguration
-        }
+    }
+    
+    func markCellAsFavorite(at indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
+        cell.favoriteImage.isHidden = self.restaurants[indexPath.row].isVisited
+        self.restaurants[indexPath.row].isVisited = self.restaurants[indexPath.row].isVisited ? false : true
+    }
 }
