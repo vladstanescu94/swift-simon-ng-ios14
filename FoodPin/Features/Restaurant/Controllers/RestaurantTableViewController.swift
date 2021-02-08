@@ -16,7 +16,7 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        setupDataSource()
+        setupDataSourceSnapshot()
     }
     
     private func setupTableView() {
@@ -25,7 +25,7 @@ class RestaurantTableViewController: UITableViewController {
         tableView.cellLayoutMarginsFollowReadableWidth = true
     }
     
-    private func setupDataSource() {
+    private func setupDataSourceSnapshot() {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Restaurant>()
         snapshot.appendSections([.all])
         snapshot.appendItems(restaurants, toSection: .all)
