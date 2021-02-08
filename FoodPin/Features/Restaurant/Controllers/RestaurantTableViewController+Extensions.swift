@@ -105,7 +105,11 @@ extension RestaurantTableViewController {
         if segue.identifier == "showRestaurantDetails" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! RestaurantDetailsViewController
-                destinationController.restaurantImageName = self.restaurants[indexPath.row].image
+                let restaurant = self.restaurants[indexPath.row]
+                destinationController.restaurantImageName = restaurant.image
+                destinationController.restaurantName = restaurant.name
+                destinationController.restaurantType = restaurant.type
+                destinationController.restaurantLocation = restaurant.location
             }
         }
     }
