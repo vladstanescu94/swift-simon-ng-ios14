@@ -15,6 +15,7 @@
 		DE01192C25CD3B3900D0BB87 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE01192B25CD3B3900D0BB87 /* RestaurantTableViewController.swift */; };
 		DE01192F25CD415B00D0BB87 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE01192E25CD415B00D0BB87 /* RestaurantTableViewCell.swift */; };
 		DE01193225CD446200D0BB87 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE01193125CD446200D0BB87 /* Restaurant.swift */; };
+		DE22552E25D162C10047B8F0 /* RestaurantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE22552D25D162C10047B8F0 /* RestaurantDetailsViewController.swift */; };
 		DE7FE72925CD80F600A075AA /* RestaurantTableViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FE72825CD80F600A075AA /* RestaurantTableViewController+Extensions.swift */; };
 		DE7FE72C25CD84DB00A075AA /* RestaurantDiffableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE7FE72B25CD84DB00A075AA /* RestaurantDiffableDataSource.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		DE01192B25CD3B3900D0BB87 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 		DE01192E25CD415B00D0BB87 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		DE01193125CD446200D0BB87 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		DE22552D25D162C10047B8F0 /* RestaurantDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsViewController.swift; sourceTree = "<group>"; };
 		DE7FE72825CD80F600A075AA /* RestaurantTableViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RestaurantTableViewController+Extensions.swift"; sourceTree = "<group>"; };
 		DE7FE72B25CD84DB00A075AA /* RestaurantDiffableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDiffableDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,7 @@
 			children = (
 				DE01191C25CD3A3900D0BB87 /* LaunchScreen.storyboard */,
 				DE01193525CD7DE800D0BB87 /* Restaurant */,
+				DE22552925D162650047B8F0 /* RestaurantDetails */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -133,6 +136,38 @@
 				DE01192E25CD415B00D0BB87 /* RestaurantTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DE22552925D162650047B8F0 /* RestaurantDetails */ = {
+			isa = PBXGroup;
+			children = (
+				DE22552C25D162780047B8F0 /* Controllers */,
+				DE22552A25D162700047B8F0 /* Models */,
+				DE22552B25D162750047B8F0 /* Views */,
+			);
+			path = RestaurantDetails;
+			sourceTree = "<group>";
+		};
+		DE22552A25D162700047B8F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DE22552B25D162750047B8F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE22552C25D162780047B8F0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE22552D25D162C10047B8F0 /* RestaurantDetailsViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +246,7 @@
 				DE01191425CD3A3800D0BB87 /* SceneDelegate.swift in Sources */,
 				DE7FE72925CD80F600A075AA /* RestaurantTableViewController+Extensions.swift in Sources */,
 				DE7FE72C25CD84DB00A075AA /* RestaurantDiffableDataSource.swift in Sources */,
+				DE22552E25D162C10047B8F0 /* RestaurantDetailsViewController.swift in Sources */,
 				DE01192C25CD3B3900D0BB87 /* RestaurantTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

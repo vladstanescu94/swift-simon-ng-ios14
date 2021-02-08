@@ -170,10 +170,10 @@
             </objects>
             <point key="canvasLocation" x="873.84615384615381" y="-23.459715639810426"/>
         </scene>
-        <!--View Controller-->
+        <!--Restaurant Details View Controller-->
         <scene sceneID="7Ql-gF-w1q">
             <objects>
-                <viewController id="dji-B8-oK5" sceneMemberID="viewController">
+                <viewController id="dji-B8-oK5" customClass="RestaurantDetailsViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GTP-fp-oAe">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
