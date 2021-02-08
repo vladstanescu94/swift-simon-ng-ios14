@@ -86,7 +86,7 @@ extension RestaurantTableViewController {
             }
         
             favoriteAction.backgroundColor = UIColor.systemYellow
-            favoriteAction.image = UIImage(systemName: self.restaurants[indexPath.row].isVisited ? "heart.slash.fill" : "heart.fill")
+            favoriteAction.image = UIImage(systemName: self.restaurants[indexPath.row].isFavorite ? "heart.slash.fill" : "heart.fill")
             
             let swipeConfiguration = UISwipeActionsConfiguration(actions: [favoriteAction])
                 
@@ -95,8 +95,8 @@ extension RestaurantTableViewController {
     
     func markCellAsFavorite(at indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
-        cell.favoriteImage.isHidden = self.restaurants[indexPath.row].isVisited
-        self.restaurants[indexPath.row].isVisited = self.restaurants[indexPath.row].isVisited ? false : true
+        cell.favoriteImage.isHidden = self.restaurants[indexPath.row].isFavorite
+        self.restaurants[indexPath.row].isFavorite = self.restaurants[indexPath.row].isFavorite ? false : true
     }
     
     //MARK: - Segue
