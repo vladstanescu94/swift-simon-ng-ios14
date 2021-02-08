@@ -6,10 +6,10 @@
 //
 
 struct Restaurant: Hashable {
-    var name: String
-    var image: String
-    var location: String
-    var type: String
+    var name: String = ""
+    var image: String = ""
+    var location: String = ""
+    var type: String = ""
     var isVisited: Bool = false
 }
 

@@ -11,10 +11,7 @@ class RestaurantDetailsViewController: UIViewController {
     @IBOutlet var restaurantImageView: UIImageView!
     @IBOutlet var restaurantDescriptionView: UIView!
     
-    var restaurantImageName = ""
-    var restaurantName = ""
-    var restaurantType = ""
-    var restaurantLocation = ""
+    var restaurant = Restaurant()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +25,7 @@ class RestaurantDetailsViewController: UIViewController {
     }
     
     private func setupImageView() {
-        restaurantImageView.image = UIImage(named: restaurantImageName)
+        restaurantImageView.image = UIImage(named: restaurant.image)
     }
     
     private func setupDetailsDescriptionView() {
@@ -36,8 +33,8 @@ class RestaurantDetailsViewController: UIViewController {
             return
         }
         
-        detailsView.restaurantName.text = restaurantName
-        detailsView.restaurantType.text = restaurantType
-        detailsView.restaurantLocation.text = restaurantLocation
+        detailsView.restaurantName.text = restaurant.name
+        detailsView.restaurantType.text = restaurant.type
+        detailsView.restaurantLocation.text = restaurant.location
     }
 }
