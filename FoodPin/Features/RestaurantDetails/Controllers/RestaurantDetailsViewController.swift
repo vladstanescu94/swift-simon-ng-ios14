@@ -8,8 +8,15 @@
 import UIKit
 
 class RestaurantDetailsViewController: UIViewController {
-
+    @IBOutlet var restaurantImageView: UIImageView!
+    var restaurantImageName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupImageView()
+    }
+    
+    private func setupImageView() {
+        restaurantImageView.image = UIImage(named: restaurantImageName)
     }
 }

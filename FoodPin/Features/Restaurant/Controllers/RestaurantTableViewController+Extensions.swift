@@ -98,4 +98,15 @@ extension RestaurantTableViewController {
         cell.favoriteImage.isHidden = self.restaurants[indexPath.row].isVisited
         self.restaurants[indexPath.row].isVisited = self.restaurants[indexPath.row].isVisited ? false : true
     }
+    
+    //MARK: - Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRestaurantDetails" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! RestaurantDetailsViewController
+                destinationController.restaurantImageName = self.restaurants[indexPath.row].image
+            }
+        }
+    }
 }
