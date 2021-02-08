@@ -15,11 +15,17 @@ class RestaurantTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupTableView()
+        setupDataSource()
+    }
+    
+    private func setupTableView() {
         tableView.dataSource = dataSource
         tableView.separatorStyle = .none
         tableView.cellLayoutMarginsFollowReadableWidth = true
-        
+    }
+    
+    private func setupDataSource() {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Restaurant>()
         snapshot.appendSections([.all])
         snapshot.appendItems(restaurants, toSection: .all)
