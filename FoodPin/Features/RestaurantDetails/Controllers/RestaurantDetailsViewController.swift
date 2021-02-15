@@ -21,7 +21,7 @@ class RestaurantDetailsViewController: UIViewController {
     }
     
     private func setupNavigation() {
-        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     private func setupHeaderView() {
