@@ -23,6 +23,7 @@ class RestaurantDetailsViewController: UIViewController {
     
     private func setupNavigation() {
         navigationItem.largeTitleDisplayMode = .never
+        navigationController?.hidesBarsOnSwipe = false
     }
     
     private func setupHeaderView() {
@@ -40,6 +41,13 @@ class RestaurantDetailsViewController: UIViewController {
         tableView.delegate = self
         tableView.separatorStyle = .none
         tableView.contentInsetAdjustmentBehavior = .never
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
 }
 
