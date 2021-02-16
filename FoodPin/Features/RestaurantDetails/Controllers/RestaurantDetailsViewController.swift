@@ -13,6 +13,10 @@ class RestaurantDetailsViewController: UIViewController {
     @IBOutlet var headerView: RestaurantDetailsHeaderView!
     
     var restaurant = Restaurant()
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
