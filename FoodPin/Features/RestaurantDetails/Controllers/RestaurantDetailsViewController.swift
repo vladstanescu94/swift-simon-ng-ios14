@@ -39,6 +39,7 @@ class RestaurantDetailsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.separatorStyle = .none
+        tableView.contentInsetAdjustmentBehavior = .never
     }
 }
 
