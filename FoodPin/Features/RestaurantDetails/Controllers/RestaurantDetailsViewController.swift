@@ -38,6 +38,7 @@ class RestaurantDetailsViewController: UIViewController {
     private func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.separatorStyle = .none
     }
 }
 
