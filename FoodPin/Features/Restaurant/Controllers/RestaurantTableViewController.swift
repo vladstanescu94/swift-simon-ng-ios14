@@ -36,6 +36,7 @@ class RestaurantTableViewController: UITableViewController {
     
     private func setupNavigation() {
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.backButtonTitle = ""
         
         if let appearance = navigationController?.navigationBar.standardAppearance {
             appearance.configureWithTransparentBackground()
