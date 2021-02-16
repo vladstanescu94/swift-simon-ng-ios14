@@ -37,6 +37,7 @@ class RestaurantTableViewController: UITableViewController {
     private func setupNavigation() {
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.hidesBarsOnSwipe = true
+        navigationItem.largeTitleDisplayMode = .always
         navigationItem.backButtonTitle = ""
         
         
@@ -58,5 +59,6 @@ class RestaurantTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         
         navigationController?.hidesBarsOnSwipe = true
+        navigationItem.largeTitleDisplayMode = .always
     }
 }

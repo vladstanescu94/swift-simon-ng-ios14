@@ -164,7 +164,7 @@
                             <outlet property="delegate" destination="jVb-bG-Jmc" id="Cg8-aN-vWa"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="FoodPin" id="X7h-bb-RcX"/>
+                    <navigationItem key="navigationItem" title="FoodPin" largeTitleDisplayMode="always" id="X7h-bb-RcX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdL-tU-exQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
